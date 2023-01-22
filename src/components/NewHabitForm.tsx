@@ -20,7 +20,7 @@ export function NewHabitForm() {
   async function createNewHabit(event: FormEvent) {
     event.preventDefault();
 
-    if (title === "" || weekDays.length === 0) {
+    if (!title.trim() || weekDays.length === 0) {
       return;
     }
 
